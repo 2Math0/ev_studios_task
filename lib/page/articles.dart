@@ -1,5 +1,6 @@
 import 'package:ev_studios_task/bloc/articles-bloc.dart';
 import 'package:ev_studios_task/model/articles-model.dart';
+import 'package:ev_studios_task/page/water_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -32,6 +33,12 @@ class ArticlesPageState extends State<ArticlesPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(title: const Text('Articles')),
       body: _buildListArticles(),
+      floatingActionButton: ElevatedButton(
+          onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (builder) => const WaterAnimationPage())),
+          child: const Text('Water Animation')),
     );
   }
 
