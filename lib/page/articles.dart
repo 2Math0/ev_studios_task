@@ -88,9 +88,8 @@ class ArticlesPageState extends State<ArticlesPage> {
                   color: const Color.fromARGB(255, 196, 193, 193), width: 0.5)),
           child: Column(
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+              ExpansionTile(
+                title: Text('About the Writer: ${model.name!.first}'),
                 children: [
                   Text(
                       "Name: ${model.name!.first} ${model.name!.middle} ${model.name?.last}"
@@ -122,9 +121,8 @@ class ArticlesPageState extends State<ArticlesPage> {
               Image.network(
                 "${model.images?.main}",
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+              ExpansionTile(
+                title: const Text('His Sayings'),
                 children: [
                   for (String saying in model.sayings!) Text(saying),
                 ],
